@@ -1,17 +1,14 @@
 import './index.scss'
 import LogoTitle from '../../assets/images/logo-m.png'
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AnimatedLetters from '../AnimatedLetters';
-import { useEffect } from 'react';
-
 
 const Home = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = ['a', 'r', 't', 'i', 'n']
     const jobArray = ['S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.']
-
 
     useEffect(() => {
         setTimeout(() => {
@@ -40,4 +37,4 @@ const Home = () => {
     );
 }
 
-export default Home
+export default Home;

@@ -1,26 +1,35 @@
 .page {
-    width: 100%;
+    width: calc(100% - 80px);
+    /* Adjust the width to leave space for the navbar */
     height: 100%;
     position: absolute;
+    overflow: auto;
+    /* Add vertical and horizontal scrollbars */
+    left: 60px;
+    /* Adjust the left value according to your navbar width */
 }
 
 .container {
     width: 100%;
     will-change: contents;
-    height: 90%;
-    min-height: 566px;
+    height: 100%;
+    min-height: auto;
     position: absolute;
     opacity: 0;
-    top: 5%;
+    top: 0;
+    //left: -55px;
+    /* Adjust the left value according to your navbar width */
     margin: 0 auto;
     z-index: 1;
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
+    //overflow: auto;
+    /* Add vertical and horizontal scrollbars */
 }
 
 .container.contact-page,
-.container.about-page{
+.container.about-page {
 
     h1 {
         font-size: 51px;
@@ -31,8 +40,6 @@
         position: relative;
         margin-bottom: 10px;
         left: 0px;
-
-        
     }
 
     p {
@@ -73,4 +80,3 @@
         }
     }
 }
-

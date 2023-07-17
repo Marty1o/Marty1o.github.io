@@ -7,12 +7,12 @@ const Layout = () => {
         <div className="App">
             <Sidebar />
             <div className='page'>
-
-                <Outlet />
-                
+                <div className='container'>
+                    <Outlet />
+                </div>
             </div>
         </div>
     )
 }
 
-export default Layout
+export default Layout;
