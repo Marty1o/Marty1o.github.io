@@ -10,6 +10,10 @@ const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
     const refForm = useRef()
 
+    const SERVICE_ID = "service_ntwfqbh"
+    const TEMPLATE_ID = "template_0ht09u1"
+    const PUBLIC_KEY = "5JQZQGmABlPuvni-C"
+
     useEffect(() => {
         setTimeout(() => {
             setLetterClass('text-animate-hover')
@@ -21,10 +25,10 @@ const Contact = () => {
 
         emailjs
             .sendForm(
-                'YOUR-SERVICE-ID',
-                'YOUR-TEMPLATE-ID',
+                SERVICE_ID,
+                TEMPLATE_ID,
                 refForm.current,
-                'YOU-PUBLIC-KEY'
+                PUBLIC_KEY
             )
             .then(
                 () => {
